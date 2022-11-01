@@ -14,6 +14,21 @@
     - [400.perlbench](#400perlbench)
         + [構建](#構建)
         + [執行](#執行)
+    - [401.bzip2](#401bzip2)
+        + [構建](#構建-1)
+        + [執行](#執行-1)
+    - [403.gcc](#403gcc)
+        + [構建](#構建-2)
+        + [執行](#執行-2)
+    - [429.mcf](#429mcf)
+        + [構建](#構建-3)
+        + [執行](#執行-3)
+    - [433.milc](#433milc)
+        + [構建](#構建-4)
+        + [執行](#執行-4)
+    - [444.namd](#444namd)
+        + [構建](#構建-5)
+        + [執行](#執行-5)
 
 <!-- vim-markdown-toc -->
 
@@ -94,4 +109,109 @@ touch ./400.perlbench.sh && chmod u+x ./400.perlbench.sh
 specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./400.perlbench.sh
 
 ./400.perlbench.sh
+```
+
+### 401.bzip2
+
+#### 構建
+
+```zsh
+source shrc
+
+runspec -D -c test.cfg -i test -n 1 -T base 401.bzip2
+```
+
+#### 執行
+
+```zsh
+cd benchspec/CPU2006/401.bzip2/run/run_base_test_lnx64-gcc.0000
+
+touch ./401.bzip2.sh && chmod u+x ./401.bzip2.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./401.bzip2.sh
+
+./401.bzip2.sh
+```
+
+### 403.gcc
+
+#### 構建
+
+```zsh
+source shrc
+
+runspec -D -c test.cfg -i test -n 1 -T base 403.gcc
+```
+
+#### 執行
+
+```zsh
+cd benchspec/CPU2006/403.gcc/run/run_base_test_lnx64-gcc.0000
+
+touch ./403.gcc.sh && chmod u+x ./403.gcc.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./403.gcc.sh
+
+./403.gcc.sh
+```
+
+### 429.mcf
+
+#### 構建
+
+```zsh
+source shrc
+
+runspec -D -c test.cfg -i test -n 1 -T base 429.mcf
+```
+
+#### 執行
+
+```zsh
+cd benchspec/CPU2006/429.mcf/run/run_base_test_lnx64-gcc.0000
+
+touch ./429.mcf.sh && chmod u+x ./429.mcf.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./429.mcf.sh
+
+./429.mcf.sh
+```
+
+### 433.milc
+
+#### 構建
+
+```zsh
+source shrc
+
+runspec -D -c test.cfg -i test -n 1 -T base 433.milc
+```
+
+#### 執行
+
+```zsh
+cd benchspec/CPU2006/433.milc/run/run_base_test_lnx64-gcc.0000
+
+touch ./433.milc.sh && chmod u+x ./433.milc.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./433.milc.sh
+
+./433.milc.sh
+```
+
+### 444.namd
+
+#### 構建
+
+```zsh
+source shrc
+
+runspec -D -c test.cfg -i test -n 1 -T base 444.namd
+```
+
+#### 執行
+
+```zsh
+cd benchspec/CPU2006/444.namd/run/run_base_test_lnx64-gcc.0000
+
+touch ./444.namd.sh && chmod u+x ./444.namd.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./444.namd.sh
+
+./444.namd.sh
 ```
